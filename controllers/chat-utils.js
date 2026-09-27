@@ -39,6 +39,7 @@ export const streamMessage = async (res, model, messages) => {
     model,
     messages,
     stream: true,
+    store: true,
   });
 
   let text = "";
