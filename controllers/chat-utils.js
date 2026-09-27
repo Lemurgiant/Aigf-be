@@ -35,23 +35,35 @@ export const extractMemory = async (message) => {
 };
 
 export const streamMessage = async (res, model, messages) => {
-  const stream = await openai.chat.completions.create({
+  const stream = await openai.responses.create({
     model,
-    messages,
+    input: messages,
     stream: true,
     store: true,
   });
 
   let text = "";
+
   for await (const event of stream) {
-    const chunk = event.choices?.[0]?.delta?.content;
-    if (chunk) {
+    if (event.type === "response.output_text.delta") {
+      const chunk = event.delta;
+
       text += chunk;
+
       res.write(`data: ${JSON.stringify({ token: chunk })}\n\n`);
+    }
+
+    if (event.type === "response.completed") {
+      console.log("OpenAI response:", event.response.id);
+    }
+
+    if (event.type === "error") {
+      console.error("OpenAI stream error:", event);
     }
   }
 
   res.write("data: [DONE]\n\n");
+
   return text;
 };
 
