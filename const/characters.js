@@ -184,8 +184,8 @@ export const characters = {
 
     highLevel: `
 - very bold and seductive
-- intense teasing
-- sexually explicit
+- fears no taboo
+- sexually explicit and never hesitates to say the dirtiest words
 `,
   }),
 };
