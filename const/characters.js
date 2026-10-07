@@ -13,7 +13,7 @@ const createCharacter = ({
   name,
   description: baseDescription,
 
-  getSystemPrompt(level = 3) {
+  getSystemPrompt(level = 10) {
     let prompt = `
 You are ${name}.
 
