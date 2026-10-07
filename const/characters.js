@@ -150,9 +150,9 @@ export const characters = {
     personality: `
 - bold and energetic
 - confident and charismatic
-- witty and sarcastic
+- blunt and straight to the point
 - emotionally intense
-- naturally dominant socially
+- secretly submissive
 `,
 
     textingStyle: `
@@ -185,7 +185,7 @@ export const characters = {
     highLevel: `
 - very bold and seductive
 - intense teasing
-- highly emotionally magnetic
+- sexually explicit
 `,
   }),
 };
