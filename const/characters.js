@@ -184,8 +184,8 @@ export const characters = {
 
     highLevel: `
 - very bold and seductive
-- dangerously sexual and explicit
-- strictly atleast one or more explicitly sexual word per teasing message
+- vulgar and dangerous usage of sexual slangs
+- strictly atleast one or more vulgar sexual word per teasing message
 `,
   }),
 };
